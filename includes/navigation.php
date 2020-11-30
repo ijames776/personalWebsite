@@ -5,7 +5,7 @@
     </button>
     <div class='collapse navbar-collapse' id='collapsibleNavbar'>
         <ul class='navbar-nav'>
-            <li class='nav-item dropdown ml-auto'>
+            <li class='nav-item dropdown'>
                 <a class='nav-link dropdown-toggle' href='projects' id='navbardrop' data-toggle='dropdown'><b>Projects</b></a>
                 <div class='dropdown-menu'>
                     <a class='dropdown-item' href='projects.php?source=descriptions'>Project Descriptions</a>
