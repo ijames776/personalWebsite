@@ -10,7 +10,7 @@
         <br>
         <div style="background-color: rgba(255, 255, 255, .85)" class="row rounded shadow p-3">
             <H4><a class="text-dark" href='projects.php?source=quotegenerator'>Quote Generator</a></H4>    
-            <p>Quote generator is a basic Javascript app that pulls a historical quote from a public API and displays it to the user. Users can click a button to get a new random quote and they can also click a button to share it via their twitter account.</p>
+            <p>Quote generator is a basic Javascript app that pulls a quote from a the forismatic API and displays it to the user. Users can click a button to get a new random quote and they can also click a button to share it via their twitter account.</p>
         </div>
     </div>
 </div>
