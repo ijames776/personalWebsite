@@ -39,6 +39,11 @@
   text-align: left;
 }
 
+.dropbtn>i {
+  pointer-events: none; 
+  cursor: default;
+}
+
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
