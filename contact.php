@@ -15,35 +15,23 @@ if(isset($_POST['submit'])) {
 
 ?>
 
-<div class="container">
-    <div class="col">
-        <br>
-        <div style="background-color: rgba(255, 255, 255, .85)" class="row rounded shadow p-3">
-        <div class="col">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Contact Me</h1>
-                </div>
+
+<div class="basic-container" style="align-items: Center;">
+    <div class="text-card">
+        <h1>Contact Me</h1>
+        <form role="form" action="contact.php" method="post" id="contact-form">
+            <div class="form-group">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" style="width: 100%;">
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <form role="form" action="contact.php" method="post" id="contact-form">
-                        <div class="form-group">
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" class="sr-only">Subject</label>
-                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Enter your subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="body" id="body" rows="15"></textarea>
-                        </div>
-                        <input type="submit" name="submit" id="btn-login" class="btn btn-primary btn-lg btn-block" value="Submit">
-                    </form>
-                </div>
+            <div class="form-group">
+                <label for="subject" class="sr-only">Subject</label>
+                <input type="text" name="subject" id="subject" class="form-control" placeholder="Enter your subject" style="width: 100%;">
             </div>
-        </div>
-        </div>
+            <div class="form-group">
+                <textarea class="form-control" name="body" id="body" rows="15" cols="500" style="width:100%;"></textarea>
+            </div>
+            <input type="submit" name="submit" id="btn-login" class="btn btn-primary btn-lg btn-block" value="Submit">
+        </form>
     </div>
 </div>

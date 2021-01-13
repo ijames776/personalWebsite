@@ -1,0 +1,138 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav>a:first-child {
+  font-weight: bold;
+}
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+/* .dropdown {
+  float: left;
+} */
+
+/* Style the dropdown button to fit inside the topnav */
+.dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  text-align: left;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  /* float: none; */
+  color: black;
+  /* display: block; */
+  text-align: left;
+}
+
+.dropdown .dropdown {
+  width: 100%;
+  position: relative;
+}
+
+.dropdown .dropdown .dropbtn {
+  /* float: none; */
+  color: black;
+  width: 100%;
+  padding: 14px 16px;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown .dropdown .dropdown-content {
+	top: 0%;
+	left: 100%;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropbtn:hover {
+  background-color: #555;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover, .dropdown-content .dropbtn:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dopdown menu when it has this class */
+.show {
+  display: flex;
+}
+
+/* Media Queries */
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropbtn {
+    display: none;
+  }
+
+  .topnav a.icon {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive .dropdown, .topnav.responsive .dropbtn {
+    width: 100%;
+  }
+
+  .topnav.responsive a, .topnav.responsive .dropbtn {
+    display: flex;
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+
+  .topnav.responsive .dropdown .dropdown .dropdown-content {
+    position: relative;
+    top: 100%;
+    left: 0%;
+  }
+}
