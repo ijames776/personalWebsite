@@ -8,7 +8,11 @@ if(isset($_POST['submit'])) {
     $to = "contact@ianajames.com";
     $subject = wordwrap($_POST['subject'], 70);
     $body = $_POST['body'];
-    $header = $_POST['email'];
+    $from = $_POST['email'];
+    $headers  = "From: $from\n";
+    $headers .= "Return-Path: contact@ianajames.com\n"; // Return path for errors
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=iso-8859-1\n";
 
     mail($to, $subject, $body, $header);
 }
